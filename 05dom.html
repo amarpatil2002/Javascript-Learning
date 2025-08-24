@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom manipulation</title>
+</head>
+<body>
+    <div id="parent" style="background-color: beige;">
+        <div class="oneday">Monday</div>
+        <div class="twoday">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+        <div class="day">Friday</div>
+    </div>
+
+    <script>
+        let parent = document.querySelector("#parent")
+        //console.log(parent);
+        //console.log(parent.children);
+        let arr = Array.from(parent.children)
+        //arr.forEach((item) => {
+        //    console.log(item.innerHTML);
+        //})
+
+        //for(let i=0;i<parent.children.length;i++){
+        //    console.log(parent.children[i].innerHTML);
+        //}
+
+        //console.log(parent.children[1].style.color="red");
+
+        let oneday = document.querySelector(".oneday")
+        //console.log(oneday);
+        //console.log(oneday.parentElement);
+        //console.log(oneday.parentNode);
+
+        //create new element
+        let div = document.createElement('div')
+        div.id = Math.floor(Math.random()*10 + 10)
+        div.className = "newdiv"
+        div.innerText = "Hello this my own html element"
+        div.setAttribute("title","div")
+        div.style.color = "purple"
+        //parent.append(div)
+
+        //document.body.appendChild(div)
+        //console.log(div);
+    </script>
+
+    <div class="edit">
+        <ul class="cars">
+            <li id="bmw">BMW</li>
+            <li id="fortuner">Fortuner</li>
+        </ul>
+    </div>
+
+    <script>
+
+        function addCars(newcar){
+            let cars = document.querySelector(".cars")
+            let car = document.createElement('li')
+            car.innerText = `${newcar}`
+            cars.appendChild(car)
+        }
+        addCars("Maruti")
+
+        let 
+        
+    </script>
+</body>
+</html>

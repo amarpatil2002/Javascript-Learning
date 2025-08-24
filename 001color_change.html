@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color change</title>
+    <style>
+        .button{
+            width: 100px;
+            height: 100px;
+            background-color: aqua;
+            border-color: black;
+            cursor:pointer;
+            margin: 10px;
+        }
+        #aqua{
+        
+            background-color: aqua;
+            
+        }
+        #orange{
+            background-color: orangered;
+        }
+        #green{
+            background-color: green;
+        }
+        #purple{
+            background-color: purple;
+        }
+    </style>
+</head>
+<body>
+    <div class="color-change">
+        <div class='button' id="aqua"></div>
+        <div class='button' id="orange"></div>
+        <div class='button' id="green"></div>
+        <div class='button' id="purple"></div>
+    </div>
+    <script>
+        let buttons = document.querySelectorAll(".button")
+        let body = document.querySelector('body')
+        buttons.forEach((btn) => {
+            btn.addEventListener("click" , (e) => {
+                console.log(e.target.id);
+                if(e.target.id === "aqua"){
+                    body.style.backgroundColor = e.target.id
+                }else  if(e.target.id === "orange"){
+                    body.style.backgroundColor = e.target.id
+                }else if(e.target.id === "green"){
+                    body.style.backgroundColor = e.target.id
+                }else if(e.target.id === "purple"){
+                    body.style.backgroundColor = e.target.id
+                }
+            })
+        })
+        
+        
+    </script>
+</body>
+</html>
