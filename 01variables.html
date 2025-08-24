@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div>
+        <button id="showqty" >Show Quantity</button>
+        <button id="addqty">Add to Cart</button>
+        <button id="addqty2">+2</button>
+        <button id="addqty3">+3</button>
+        <button id="resetcart">Reset Cart</button>
+    </div>
+    <script>
+        const showQty = document.getElementById('showqty')
+        const addQty = document.getElementById('addqty')
+        const addQty2 = document.getElementById('addqty2')
+        const addQty3 = document.getElementById('addqty3')
+        const resetCart = document.getElementById('resetcart')
+        
+        let initialQty = 0
+
+        showQty.addEventListener('click' , () =>{
+            console.log(`Cart quantity ${initialQty}`);
+        })
+
+        addQty.addEventListener('click' , () =>{
+            initialQty+=1
+            console.log(`Cart quantity ${initialQty}`);
+        })
+        addQty2.addEventListener('click' , () =>{
+            initialQty+=2
+            console.log(`Cart quantity ${initialQty}`);
+        })
+        addQty3.addEventListener('click' , () =>{
+            initialQty+=3
+            console.log(`Cart quantity ${initialQty}`);
+        })
+        resetCart.addEventListener('click' , () =>{
+            initialQty=0
+            console.log(`Cart quantity ${initialQty}`);
+        })
+
+    </script>
+
+    <!-- <Script>
+        const accountNumber = 123456
+        let accountEmailId = "amarjit@gmail.com"
+        var accountPassword = "789456"
+        accountCity = "Pandharpur"
+
+        //accountNumber = 123456   //  Using const keyword we can't redeclare and reassign the variable
+        accountEmailId = "amarjitpatil@gmail.com"
+        // let accountEmailId = "amarjitpatil@gmail.com" // We can't redeclare variable using let keyword but we can reassign the value
+        var accountPassword = 11111222                   // We can redeclare and ressign variable using var keyword
+
+        // console.table([accountNumber,accountEmailId,accountPassword,accountCity])
+        var num2 = 400
+        let num = 50
+        {
+            let num = 100    //
+            const num1 = 120 // let and const both keywords have block level scope
+            var num2 = 140   // var has functional level scope
+        }
+
+        // console.log(num)
+        // console.log(num1)
+        console.log(num2)
+    </Script> -->
+</body>
+</html>
